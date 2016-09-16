@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :house do
+    title "MyString"
+    address "MyString"
+    user_id nil
+  end
 
   factory(:new_user) do
     email 'Miya@moto.com'
