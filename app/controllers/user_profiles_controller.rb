@@ -11,7 +11,6 @@ class UserProfilesController < ApplicationController
   def create
     @user_profile = UserProfile.new(profile_params)
     @user_profile.user = current_user
-    binding.pry
     if @user_profile.save
       redirect_to @user_profile
     else

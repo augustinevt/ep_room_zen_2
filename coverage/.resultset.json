@@ -1,11 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/user_profile_spec.rb": [
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/features/user_profile_feature_spec.rb": [
+        1,
+        null,
         1,
         null,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/rails_helper.rb": [
@@ -16,6 +30,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -46,6 +61,16 @@
         null,
         1,
         null,
+        1,
+        4,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
         null,
         null,
         null,
@@ -64,6 +89,13 @@
         null,
         1,
         null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -544,6 +576,8 @@
         1,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/user.rb": [
@@ -582,6 +616,35 @@
         null,
         null
       ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/controllers/user_profiles_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/jobs/application_job.rb": [
         1,
         null
@@ -597,19 +660,48 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/factories.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/user_profile_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/user_spec.rb": [
         1,
         null,
         1,
-        1,
+        null,
         null
       ]
     },
-    "timestamp": 1474045404
+    "timestamp": 1474055322
   }
 }
