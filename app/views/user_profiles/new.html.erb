@@ -1,7 +1,3 @@
 <%= render 'form' %>
 
 <h1>other</h1>
-<% @questions.each do |q| %>
-  <%= q.title %>
-  <%= render 'compatibilities/form', object: q %>
-<%end%>

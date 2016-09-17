@@ -1,6 +1,5 @@
 class UserProfile < ApplicationRecord
 
-
   after_save :make_answers
 
 
@@ -11,7 +10,6 @@ class UserProfile < ApplicationRecord
   has_many :images, as: :imageable
   has_many :compatibilities
   has_many :questions, through: :compatibilities
-
   def make_answers
     Question.all.each do |q|
       c = self.compatibilities.create(response: 3, question_id: q.id)
