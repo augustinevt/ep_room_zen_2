@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917183814) do
+ActiveRecord::Schema.define(version: 20160917193619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "compatibilities", force: :cascade do |t|
+    t.integer  "user_profile_id"
+    t.integer  "question_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "response"
+    t.index ["question_id"], name: "index_compatibilities_on_question_id", using: :btree
+    t.index ["user_profile_id"], name: "index_compatibilities_on_user_profile_id", using: :btree
+  end
 
   create_table "houses", force: :cascade do |t|
     t.string   "title"
@@ -34,6 +44,13 @@ ActiveRecord::Schema.define(version: 20160917183814) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id", using: :btree
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "response"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "requests", force: :cascade do |t|
@@ -74,4 +91,6 @@ ActiveRecord::Schema.define(version: 20160917183814) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "compatibilities", "questions"
+  add_foreign_key "compatibilities", "user_profiles"
 end

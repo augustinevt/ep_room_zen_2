@@ -9,3 +9,14 @@
 <%end%>
 
 <h1>AJAX!</h1>
+
+<% @user_profile.compatibilities.each do |c| %>
+
+  <h1><%= c.question.title %>: <%= c.response%></h1>
+
+<% end %>
+
+<% @user_profile.compatibilities.each do |c| %>
+  <%= c.question.title %>
+  <%= render 'compatibilities/form', q: c.question, c: c  %>
+<%end%>

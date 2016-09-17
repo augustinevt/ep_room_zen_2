@@ -1,4 +1,12 @@
 FactoryGirl.define do
+  factory :compatibility do
+    user_profile_id nil
+    question_id nil
+  end
+  factory :question do
+    title "MyString"
+    response 1
+  end
 
   factory :image do
     caption "MyString"

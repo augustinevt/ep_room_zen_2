@@ -1,6 +1,7 @@
 class UserProfilesController < ApplicationController
 
   def new
+    @questions = Question.all
     @user_profile = UserProfile.new
   end
 

@@ -9,4 +9,8 @@ Rails.application.routes.draw do
     resources :requests
   end
 
+  resources :questions do
+    resources :compatibilities  
+  end
+
 end
