@@ -11,6 +11,10 @@ class Request < ApplicationRecord
       sum + (value[0] - other[value[1]]).abs
     end
 
-    self.compatibility = final
+    dividend = (Question.all.count * 4).to_f
+    divisor = ((Question.all.count * 4) - final).to_f
+
+    self.compatibility = (divisor / dividend * 100).floor
+
   end
 end
