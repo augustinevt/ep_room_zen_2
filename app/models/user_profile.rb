@@ -4,4 +4,5 @@ class UserProfile < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   validates_presence_of :username
   has_many :images, as: :imageable
+
 end

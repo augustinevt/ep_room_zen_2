@@ -8,7 +8,6 @@ class ImagesController < ApplicationController
     else
       flash[:alert] = 'image was not saved'
     end
-      binding.pry
       redirect_to @imageable
   end
 
