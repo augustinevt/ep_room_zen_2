@@ -1,8 +1,21 @@
 FactoryGirl.define do
+
+  factory :image do
+    caption "MyString"
+    body ""
+    imageable nil
+  end
+
+  factory :request do
+    association :user
+    association :house
+    message "MyString"
+  end
+
   factory :house do
     title "MyString"
     address "MyString"
-    user_id nil
+    association :user
   end
 
   factory(:new_user) do
@@ -12,7 +25,7 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email 'Miya@moto.com'
+    sequence(:email) {|n| "test#{n}@example.com"}
     password 'foobar'
   end
 

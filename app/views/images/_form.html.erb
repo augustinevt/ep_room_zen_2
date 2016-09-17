@@ -1,0 +1,9 @@
+<%= form_for [object, Image.new] do |f| %>
+  <%= f.label :body %>
+  <%= f.file_field :body %>
+
+  <%= f.label :caption %>
+  <%= f.text_field :caption %>
+
+  <%= f.submit %>
+<%end%>

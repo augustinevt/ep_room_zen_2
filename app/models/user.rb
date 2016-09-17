@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_one :user_profile
   has_one :house
+  has_many :requests
+  has_many :requested_houses, through: :requests, source: :house
 end

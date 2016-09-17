@@ -1,2 +1,9 @@
 <%= image_tag(@user_profile.avatar) %>
-<h1>Hello <%= @user_profile.first_name %></h1> 
+<h1>Hello <%= @user_profile.first_name %></h1>
+
+<%= render 'images/form', object: @user_profile%>
+
+<% @user_profile.images.each do |image| %>
+  <%= image_tag(image.body) %>
+  <h2><%= image.caption %></h2>
+<%end%>

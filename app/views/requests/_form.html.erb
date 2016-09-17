@@ -1,0 +1,6 @@
+<%= form_for [@house, @request] do |f| %>
+  <%= f.label :message %>
+  <%= f.text_field :message %>
+
+  <%= f.submit 'Submit' %>
+<%end%>
