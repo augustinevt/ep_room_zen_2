@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :response do
+    
+  end
 
   factory :image do
     caption "MyString"
