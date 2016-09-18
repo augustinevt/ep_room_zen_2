@@ -756,11 +756,17 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/image.rb": [
         1,
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/question.rb": [
         1,
         1,
         null
@@ -771,17 +777,34 @@
         1,
         null
       ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/response.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/user_profile.rb": [
         1,
         1,
+        null,
+        null,
         1,
         1,
+        1,
+        null,
+        null,
         1,
         1,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/factories.rb": [
         1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
         null,
         1,
         1,
@@ -890,7 +913,21 @@
         1,
         null
       ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/question_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/request_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/models/response_spec.rb": [
         1,
         null,
         1,
@@ -913,6 +950,6 @@
         null
       ]
     },
-    "timestamp": 1474086115
+    "timestamp": 1474240128
   }
 }
