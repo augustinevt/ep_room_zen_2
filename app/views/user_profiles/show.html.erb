@@ -7,3 +7,7 @@
   <%= image_tag(image.body) %>
   <h2><%= image.caption %></h2>
 <%end%>
+
+<% @user_profile.responses.each do |res| %>
+  <h3><%= res.question.title  %> -> <%= res.value %></h3>
+<%end%>

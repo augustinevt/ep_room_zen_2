@@ -14,6 +14,13 @@ describe 'The User Profile Feature' do
   end
 
   it 'should do something test' do
-    user = FactoryGirl.create(:user_profile)
+    user_profile = FactoryGirl.create(:user_profile)
+  end
+
+  it 'should show the default responses on the show page' do
+    FactoryGirl.create_list(:question, 10)
+    user_profile = FactoryGirl.create(:user_profile)
+    visit user_profile_path(user_profile)
+    expect(page).to have_content("3")
   end
 end
