@@ -4,6 +4,7 @@ class Request < ApplicationRecord
 
   belongs_to :user
   belongs_to :house
+  has_many :comments
 
   def compute_compatibility
     house_responses = self.house.responses.sort_by(&:created_at)

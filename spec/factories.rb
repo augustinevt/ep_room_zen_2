@@ -1,4 +1,9 @@
 FactoryGirl.define do
+  factory :comment do
+    body "MyString"
+    association :user
+    association :request
+  end
 
   factory :question do
     title "Yo ho"

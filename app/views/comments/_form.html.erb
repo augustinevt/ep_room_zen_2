@@ -1,0 +1,5 @@
+<%= form_for [object, Comment.new] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit %>
+<%end%>

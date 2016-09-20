@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   resources :houses do
     resources :requests
   end
+  resources :requests do
+    resources :comments
+  end
 
 end

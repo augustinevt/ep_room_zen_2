@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_one :house
   has_many :requests
   has_many :requested_houses, through: :requests, source: :house
+  has_many :comments
 end

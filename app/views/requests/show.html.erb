@@ -2,3 +2,14 @@
 <%= @request.house.title %>
 <%= @request.message %>
 <h1>Compatibility <%=@request.compatibility%>%</h1>
+
+<%= render 'comments/form', object: @request %>
+
+<% @request.comments.each do |comment| %>
+  <p style="border:solid;">
+    <%= comment.body %>
+  </p>
+  <p>
+    <i><%= comment.user.user_profile.username%></i>
+  </p>
+<%end%>
