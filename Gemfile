@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # file uploading
 gem 'paperclip'
 
+# templating
+gem 'haml'
+
 #authentication
 gem 'devise'
 # Use Capistrano for deployment

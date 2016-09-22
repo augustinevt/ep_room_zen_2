@@ -1,0 +1,17 @@
+= image_tag(@user_profile.avatar)
+%h1
+  Hello
+  = @user_profile.first_name
+
+= render 'images/form', object: @user_profile
+
+- @user_profile.images.each do |image|
+  = image_tag(image.body)
+  %h2= image.caption
+
+- @user_profile.responses.each do |res|
+  %h3
+    =res.value
+    :escaped
+      ->
+    =res.question.title
