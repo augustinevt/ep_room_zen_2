@@ -1,3 +1,7 @@
+
+#test
+
+
 = image_tag(@user_profile.avatar)
 %h1
   Hello
@@ -6,12 +10,9 @@
 = render 'images/form', object: @user_profile
 
 - @user_profile.images.each do |image|
-  = image_tag(image.body)
-  %h2= image.caption
+  = render 'images/secondary_image', image: image
+  %b= image.caption
 
 - @user_profile.responses.each do |res|
   %h3
-    =res.value
-    :escaped
-      ->
-    =res.question.title
+    = render 'responses/form', respondable: @user_profile, response: res
