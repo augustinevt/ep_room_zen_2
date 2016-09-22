@@ -1,0 +1,8 @@
+=form_for [respondable, response] do |f|
+  =f.label :value, response.question.title
+  =f.radio_button :value, 1, value: 1
+  =f.radio_button :value, 2, value: 2
+  =f.radio_button :value, 3, value: 3
+  =f.radio_button :value, 4, value: 4
+  =f.radio_button :value, 5, value: 5
+  =f.submit
