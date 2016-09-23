@@ -1,0 +1,4 @@
+%h1 this is the index and root page
+
+-@user_profiles.each do |profile|
+  %h1= link_to profile.first_name, user_profile_path(profile)
