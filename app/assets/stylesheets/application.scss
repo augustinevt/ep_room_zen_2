@@ -1,15 +1,69 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+
+div {
+  border:solid;
+}
+#user-info {
+  background-color: pink;
+  min-height: 100vh;
+  @include span-columns(6)
+}
+
+#requests{
+  background-color: red;
+  min-height: 100vh;
+  @include span-columns(6)
+}
+
+#image-prime {
+  min-height: 200px;
+  @include span-columns(8);
+  @include shift(1);
+}
+#image-thumbs {
+  @include span-columns(8);
+  @include outer-container;
+  @include shift(1);
+}
+
+.temp-thumb {
+  margin-top: 10px;
+  min-height: 100px;
+  @include span-columns(6);
+  @include omega(2n);
+}
+
+#bio {
+  margin-top: 75px;
+  @include span-columns(10);
+  @include shift(1);
+}
+
+#responses {
+  margin-top: 100px;
+  @include span-columns(12);
+}
+
+#request-thumbs {
+  @include span-columns(10);
+  @include outer-container;
+  @include shift(1);
+  background-color: lime;
+  min-height: 500px;
+}
+
+.temp-req-thumb {
+  @include span-columns(4);
+  @include omega(3n);
+  min-height: 150px;
+  background-color: orange;
+  margin-top: 10px;
+}
+
+#req-details {
+  @include span-columns(12);
+  background-color: skyblue;
+  min-height: 500px;
+}
