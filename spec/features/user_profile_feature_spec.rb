@@ -17,7 +17,7 @@ describe 'The User Profile Feature' do
     user_profile = FactoryGirl.create(:user_profile)
   end
 
-  it 'should show the default responses on the show page' do
+  xit 'should show the default responses on the show page' do
     FactoryGirl.create_list(:question, 10)
     user_profile = FactoryGirl.create(:user_profile)
     visit user_profile_path(user_profile)

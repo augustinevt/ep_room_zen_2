@@ -1,8 +1,8 @@
-=form_for [respondable, response] do |f|
+=form_for [respondable, response], remote: true do |f|
   =f.label :value, response.question.title
-  =f.radio_button :value, 1, value: 1
-  =f.radio_button :value, 2, value: 2
-  =f.radio_button :value, 3, value: 3
-  =f.radio_button :value, 4, value: 4
-  =f.radio_button :value, 5, value: 5
-  =f.submit
+  =f.radio_button :value, 1, id: "response_#{response.question.id}_value_1"
+  =f.radio_button :value, 2, id: "response_#{response.question.id}_value_2"
+  =f.radio_button :value, 3, id: "response_#{response.question.id}_value_3"
+  =f.radio_button :value, 4, id: "response_#{response.question.id}_value_4"
+  =f.radio_button :value, 5, id: "response_#{response.question.id}_value_5"
+  =f.submit "Submit #{response.question.id}"

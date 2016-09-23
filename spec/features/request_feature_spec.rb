@@ -23,6 +23,6 @@ describe 'The request feature' do
     visit house_path(house)
     click_on 'Apply'
     click_on 'Submit'
-    expect(page).to have_content("100%")
+    expect(page).to have_content("100 %")
   end
 end

@@ -1,7 +1,9 @@
 %h1= @request.user.user_profile.username
 %h1= @request.house.title
 %h1= @request.message
-%h1= @request.compatibility
+%h1
+  = @request.compatibility
+  \%
 
 = render 'comments/form', object: @request
 %div{style: "border:solid;"}
