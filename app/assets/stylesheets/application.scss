@@ -30,7 +30,7 @@ div {
 
 .temp-thumb {
   margin-top: 10px;
-  min-height: 100px;
+  overflow: auto;
   @include span-columns(6);
   @include omega(2n);
 }
@@ -66,4 +66,12 @@ div {
   @include span-columns(12);
   background-color: skyblue;
   min-height: 500px;
+}
+
+.secondary-image {
+  @include fill-parent;
+}
+
+.fit {
+  @include fill-parent;
 }

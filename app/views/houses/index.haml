@@ -1,0 +1,4 @@
+%h1 this is the index and root page
+
+-@houses.each do |house|
+  %h1= link_to house.title, house_path(house)

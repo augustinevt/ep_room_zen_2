@@ -5,8 +5,13 @@ class CommentsController < ApplicationController
     @comment = @request.comments.new(comment_params)
     @comment.user = current_user
     if @comment.save
-      flash[:notice] = 'your message was saved'
-      redirect_to house_request_path(@request.house, @request)
+      respond_to do |format|
+        format.html do
+          flash[:notice] = 'your message was saved'
+          redirect_to house_request_path(@request.house, @request)
+        end
+        format.js
+      end
     else
       flash[:alert] = 'your message was not saved'
       redirect_to house_request_path(@request.house, @request)

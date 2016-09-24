@@ -1,14 +1,31 @@
 class ImagesController < ApplicationController
 
+  def new
+    @imageable = find_imageable
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def create
-    @imageable = find_commentable
+    @imageable = find_imageable
     @image = @imageable.images.new(image_params)
     if @image.save
-      flash[:notice] = 'image was saved'
+
+
+      respond_to do |format|
+
+        format.html do
+          flash[:notice] = 'image was saved'
+          redirect_to @imageable
+        end
+        format.js
+      end
     else
       flash[:alert] = 'image was not saved'
-    end
       redirect_to @imageable
+    end
   end
 
   private
@@ -18,7 +35,7 @@ class ImagesController < ApplicationController
   end
 
   # found at http://stackoverflow.com/questions/23088709/finding-parent-in-rails-polymorphic-association
-  def find_commentable
+  def find_imageable
     params.each do |name, value|
       if name =~ /(.+)_id$/
         return $1.classify.constantize.find(value)
