@@ -25,4 +25,14 @@ describe 'The User Profile Feature' do
     visit user_profile_path(user_profile)
     expect(page).to have_content(question.title)
   end
+
+  it 'should allow a user to select a request thumb and have the details show' do
+    FactoryGirl.create_list(:question, 10)
+    user_profile = FactoryGirl.create(:user_profile)
+    login_as(user_profile.user, scope: :user)
+    request_1 = FactoryGirl.create(:request, user: user_profile.user, message: 'foo1')
+    request_2 = FactoryGirl.create(:request, user: user_profile.user, message: 'foo2')
+
+
+  end
 end

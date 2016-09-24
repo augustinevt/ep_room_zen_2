@@ -19,8 +19,10 @@
 
 
   #requests
+    =@user_profile.user.requests.first
     #req-details
-      = render(@user_profile.user.requests.first)
+      -if @user_profile.user.requests.any?
+        = render(@user_profile.user.requests.first)
     #request-thumbs
       .temp-req-thumb
       .temp-req-thumb

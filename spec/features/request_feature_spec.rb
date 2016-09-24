@@ -6,6 +6,7 @@ describe 'The request feature' do
     login_as(test_user_profile.user, scope: :user)
     house = FactoryGirl.create(:house)
     visit house_path(house)
+    save_and_open_page
     click_on 'Apply'
     fill_in 'Message', with: 'hello'
     click_on 'Submit'

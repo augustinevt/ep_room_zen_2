@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'The user image feature', js: true do
+describe 'The user image feature' do
   it 'should allow a user to add an image', js: true do
     user_profile = FactoryGirl.create(:user_profile)
     login_as(user_profile.user, scope: :user)
@@ -15,6 +15,6 @@ describe 'The user image feature', js: true do
 
     click_on 'Create Image'
 
-    expect(page).to have_content "Image successfully added"
+    expect(page).to have_content "image was saved"
   end
 end

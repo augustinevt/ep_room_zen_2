@@ -15,5 +15,6 @@
 = render 'comments/form', object: request
 
 #comments
-  -request.comments.each do |comment|
-    = render(comment)
+  -if request.comments.any?
+    -request.comments.each do |comment|
+      = render(comment)
