@@ -32,6 +32,8 @@ describe 'The User Profile Feature' do
     login_as(user_profile.user, scope: :user)
     request_1 = FactoryGirl.create(:request, user: user_profile.user, message: 'foo1')
     request_2 = FactoryGirl.create(:request, user: user_profile.user, message: 'foo2')
+    click_on 'request_2'
+    expect(page).to have_content('foo2')
 
 
   end
