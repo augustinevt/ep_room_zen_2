@@ -6,7 +6,6 @@ describe 'The request feature' do
     login_as(test_user_profile.user, scope: :user)
     house = FactoryGirl.create(:house)
     visit house_path(house)
-    save_and_open_page
     click_on 'Apply'
     fill_in 'Message', with: 'hello'
     click_on 'Submit'
@@ -18,9 +17,7 @@ describe 'The request feature' do
     FactoryGirl.create_list(:question, 10)
     house = FactoryGirl.create(:house)
     user_profile = FactoryGirl.create(:user_profile)
-
     login_as(user_profile.user, scope: :user)
-
     visit house_path(house)
     click_on 'Apply'
     click_on 'Submit'

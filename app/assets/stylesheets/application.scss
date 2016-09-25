@@ -75,3 +75,17 @@ div {
 .fit {
   @include fill-parent;
 }
+
+#request-thumbs {
+  @include span-columns(10);
+  @include outer-container;
+  @include shift(1);
+
+}
+
+.req-thumb {
+  @include span-columns(3);
+  @include omega(4n);
+  background-color: grey;
+  margin-top: 10px;
+}

@@ -6,7 +6,7 @@ describe 'The user image feature' do
     login_as(user_profile.user, scope: :user)
 
     visit user_profile_path(user_profile)
-    save_and_open_page
+
     click_on 'Add Image'
 
     attach_file 'Body', 'spec/spec_assets/foo.jpg'
