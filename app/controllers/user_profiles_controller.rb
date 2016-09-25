@@ -22,6 +22,14 @@ class UserProfilesController < ApplicationController
     end
   end
 
+  def show_user_house
+    @house = current_user.house
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   private
 
   def profile_params

@@ -34,7 +34,16 @@ describe 'The User Profile Feature' do
     request_2 = FactoryGirl.create(:request, user: user_profile.user, message: 'foo2')
     visit user_profile_path(user_profile)
     find_by_id("request_#{request_2.id}").trigger('click')
-    save_and_open_page
     expect(page).to have_content('foo2')
+  end
+
+  it 'should show user house dashboard', js: true do
+    user_profile = FactoryGirl.create(:user_profile)
+    house = FactoryGirl.create(:house, user: user_profile.user)
+    login_as(user_profile.user, scope: :user)
+    visit user_profile_path(user_profile)
+
+    click_on 'HOUSE'
+    expect(page).to have_content(house.title)
   end
 end
