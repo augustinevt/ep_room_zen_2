@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :houses do
     resources :requests
     resources :responses
+    resources :images
   end
   resources :requests do
     resources :comments

@@ -5,11 +5,13 @@
 div {
   border:solid;
 }
-#user-info {
+#user-info, #house-info {
   background-color: pink;
   min-height: 100vh;
   @include span-columns(6)
 }
+
+
 
 #requests{
   background-color: red;
