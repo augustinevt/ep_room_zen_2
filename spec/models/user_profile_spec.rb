@@ -4,6 +4,9 @@ RSpec.describe UserProfile, type: :model do
    it { should belong_to(:user) }
    it { should validate_presence_of :username }
    it { should have_many :responses}
+   it { should have_many :images}
+   it { should validate_presence_of :username }
+
 
    it 'should add responses after save' do
      FactoryGirl.create_list(:question, 10)
