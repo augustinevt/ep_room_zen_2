@@ -12,11 +12,13 @@ class ImagesController < ApplicationController
     @imageable = find_imageable
     @image = @imageable.images.new(image_params)
     if @image.save
-      flash[:notice] = 'image was saved'
-      redirect_to @imageable
+      respond_to do |format|
+        format.html {flash[:notice] = 'image was saved'; redirect_to @imageable}
+        format.js
+      end
     else
-      flash[:alert] = 'image was not saved'
-      redirect_to @imageable
+      flash[:alert] = 'image not saved'
+      render :new
     end
   end
 
