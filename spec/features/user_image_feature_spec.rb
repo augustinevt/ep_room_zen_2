@@ -15,6 +15,6 @@ describe 'The user image feature' do
 
     click_on 'Create Image'
 
-    expect(page).to have_content "image was saved"
+    expect(page).to have_content "Image Successfully Added"
   end
 end
