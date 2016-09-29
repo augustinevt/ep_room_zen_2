@@ -53,6 +53,8 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'rspec-rails'
   gem 'pry'
+  gem 'kaminari'
+  gem 'geocoder'
 
 end
 
