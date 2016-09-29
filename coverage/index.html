@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-28T12:20:42-07:00">2016-09-28T12:20:42-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-28T20:52:26-07:00">2016-09-28T20:52:26-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.34%</span></span>
+    (<span class="covered_percent"><span class="green">97.6%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.91
+         1.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>53</b> files in total.
-    <b>451</b> relevant lines. 
-    <span class="green"><b>439</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>458</b> relevant lines. 
+    <span class="green"><b>447</b> lines covered</span> and
+    <span class="red"><b>11</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#5c5d0efe701c16ec4cbef110db86bf53d72fddc7" class="src_link" title="app/controllers/houses_controller.rb">app/controllers/houses_controller.rb</a></td>
-        <td class="yellow strong">87.5 %</td>
+        <td class="green strong">93.75 %</td>
         <td>30</td>
         <td>16</td>
-        <td>14</td>
-        <td>2</td>
-        <td>1.0</td>
+        <td>15</td>
+        <td>1</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -197,7 +197,7 @@
         <td>12</td>
         <td>12</td>
         <td>0</td>
-        <td>6.6</td>
+        <td>6.8</td>
       </tr>
       
       <tr>
@@ -427,7 +427,7 @@
         <td>31</td>
         <td>31</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -443,9 +443,9 @@
       <tr>
         <td class="strong"><a href="#9b517524073f51a20d426ea57c9fe79847a9cc39" class="src_link" title="spec/features/house_feature_spec.rb">spec/features/house_feature_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>10</td>
-        <td>10</td>
+        <td>25</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -577,7 +577,7 @@
         <td>25</td>
         <td>25</td>
         <td>0</td>
-        <td>5.4</td>
+        <td>5.6</td>
       </tr>
       
     </tbody>
@@ -905,11 +905,11 @@
         <div class="source_table" id="5c5d0efe701c16ec4cbef110db86bf53d72fddc7">
   <div class="header">
     <h3>app/controllers/houses_controller.rb</h3>
-    <h4><span class="yellow">87.5 %</span> covered</h4>
+    <h4><span class="green">93.75 %</span> covered</h4>
     <div>
       <b>16</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -934,8 +934,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
           <code class="ruby">    @houses = House.all</code>
         </li>
@@ -2266,8 +2266,8 @@
           <code class="ruby">  def make_responses</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="15">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="15">
+          <span class="hits">11</span>
           
           <code class="ruby">    Question.all.each do |q|</code>
         </li>
@@ -6112,8 +6112,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="37">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="24" data-linenumber="37">
+          <span class="hits">24</span>
           
           <code class="ruby">    sequence(:email) {|n| &quot;test#{n}@example.com&quot;}</code>
         </li>
@@ -6307,8 +6307,8 @@
     <h3>spec/features/house_feature_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6400,7 +6400,67 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;should allow a user to see houses&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    user = FactoryGirl.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    login_as(user, scope: :user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    house_1 = FactoryGirl.create(:house)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    house_2 = FactoryGirl.create(:house)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit houses_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(house_1.title)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -8050,8 +8110,8 @@
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="43">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="39" data-linenumber="43">
+          <span class="hits">39</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
@@ -8122,14 +8182,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="55">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="39" data-linenumber="55">
+          <span class="hits">39</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="38" data-linenumber="56">
-          <span class="hits">38</span>
+        <li class="covered" data-hits="39" data-linenumber="56">
+          <span class="hits">39</span>
           
           <code class="ruby">      example.run</code>
         </li>

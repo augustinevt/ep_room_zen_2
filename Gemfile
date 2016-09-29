@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 gem 'bourbon'
 gem 'neat'
 gem 'remotipart'
+gem 'geocoder'
+gem 'kaminari'
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -53,8 +57,6 @@ group :development, :test do
   gem 'simplecov', require: false
   gem 'rspec-rails'
   gem 'pry'
-  gem 'kaminari'
-  gem 'geocoder'
 
 end
 

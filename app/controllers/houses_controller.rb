@@ -1,7 +1,8 @@
 class HousesController < ApplicationController
 
   def index
-    @houses = House.all
+    @houses = House.all.page params[:page]
+    @markers = House.markefy(@houses)
   end
 
   def new
