@@ -1,8 +1,12 @@
 class HousesController < ApplicationController
 
   def index
-    @houses = House.all.page params[:page]
+    @houses = House.search(params[:search_input]).page params[:page]
     @markers = House.markefy(@houses)
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new

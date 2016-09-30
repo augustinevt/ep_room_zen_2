@@ -91,7 +91,7 @@
 }
 
 #map-show {
-  border: solid;
+
   @include span-columns(7)
 }
 #house-map-show {
@@ -107,6 +107,6 @@
 }
 #house-map-thumb {
   border:solid;
-  @include span-columns(3);
-  @include omega(4n);
+  @include span-columns(4);
+  @include omega(3n);
 }
