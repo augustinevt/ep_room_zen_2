@@ -89,3 +89,24 @@
   background-color: grey;
   margin-top: 10px;
 }
+
+#map-show {
+  border: solid;
+  @include span-columns(7)
+}
+#house-map-show {
+  border: solid;
+  @include span-columns(4);
+  height: 600px;
+}
+
+#house-map-thumb-list {
+  border: solid;
+  @include span-columns(12);
+  @include outer-container;
+}
+#house-map-thumb {
+  border:solid;
+  @include span-columns(3);
+  @include omega(4n);
+}

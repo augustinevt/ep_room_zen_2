@@ -24,7 +24,7 @@ class House < ApplicationRecord
   def self.markefy(array)
     markers = []
     array.each do |house|
-      markers.push([house.title, house.latitude, house.longitude, "http://static.tumblr.com/0ee21b1cf4ad4b2057305b00cb5f9669/ihh9sai/uUWmr68oc/tumblr_static_tumblr_static_cheese_205_1362800142.jpg"])
+      markers.push([house.title, house.latitude, house.longitude, "http://static.tumblr.com/0ee21b1cf4ad4b2057305b00cb5f9669/ihh9sai/uUWmr68oc/tumblr_static_tumblr_static_cheese_205_1362800142.jpg", house.id])
     end
     markers
   end

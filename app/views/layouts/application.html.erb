@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+    <p>
+      <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+    </p>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
     <%= yield %>
