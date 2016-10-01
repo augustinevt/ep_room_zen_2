@@ -4,7 +4,9 @@ gem 'neat'
 gem 'remotipart'
 gem 'geocoder'
 gem 'kaminari'
-
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 
 
 
