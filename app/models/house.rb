@@ -1,5 +1,5 @@
 class House < ApplicationRecord
-  paginates_per 3
+  
   geocoded_by :address
   after_validation :geocode
 

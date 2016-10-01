@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require map
+//= require scroll
 //= require_tree .
