@@ -22,7 +22,7 @@ FactoryGirl.define do
   end
 
   factory :house do
-    title "MyString"
+    title "Portland"
     address "Portland, OR"
     association :user
   end

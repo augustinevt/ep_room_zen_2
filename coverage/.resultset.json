@@ -13,6 +13,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         1,
@@ -688,6 +689,7 @@
         1,
         null,
         1,
+        null,
         10,
         10,
         10,
@@ -883,7 +885,7 @@
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/models/house.rb": [
         1,
-        1,
+        null,
         1,
         1,
         null,
@@ -917,7 +919,7 @@
         1,
         10,
         10,
-        13,
+        12,
         null,
         10,
         null,
@@ -1300,6 +1302,6 @@
         null
       ]
     },
-    "timestamp": 1475279638
+    "timestamp": 1475343432
   }
 }

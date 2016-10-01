@@ -8,6 +8,7 @@ describe 'The browse feaure should' do
     house = FactoryGirl.create(:house)
     visit houses_path
     click_on house.title
+    save_and_open_page
     expect(page).to have_content(house.address)
   end
 
