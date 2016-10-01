@@ -95,9 +95,21 @@
   @include span-columns(7)
 }
 #house-map-show {
-  border: solid;
+  position: relative;
+
   @include span-columns(4);
   height: 600px;
+  overflow: auto;
+  #pictures-button {
+    position: fixed;
+    top: 80px;
+    right: 200px;
+  };
+  #responses-button {
+    position: fixed;
+    top: 80px;
+    right: 300px;
+  }
 }
 
 #house-map-thumb-list {
