@@ -16,6 +16,6 @@
     <p>
       <%= link_to 'logout', destroy_user_session_path, method: :delete %>
     </p>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9wAasFl3L3uOLJzK469tAc8tC2ch1YYw&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_MAP']%>&callback=initMap" async defer></script>
   </body>
 </html>

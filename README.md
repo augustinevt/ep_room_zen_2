@@ -20,7 +20,7 @@
   * run `rake db:test:prepare`
 
   * create an .env file in to root directory
-    * please include the proper api credentials in this .env file in the following format, replacing the placeholders with your actual information. If you are unsure how to aquire keys and secrets please refer to the subsequent documentation.
+    * please include the proper api credentials in the .env file in the following format, replacing the placeholders with your actual information. If you are unsure how to acquire keys and secrets please refer to the subsequent documentation.
     ```
     GOOGLE_MAPS_KEY=<google_maps_key>
     GOOGLE_OAUTH2_KEY=<google_api_key>
@@ -32,7 +32,7 @@
     ###### [google oauth2](https://developers.google.com/+/web/api/rest/oauth)
     ###### [facebook oauth2](https://developers.facebook.com/products/login)
 
-    
+
   * run `rails s`
   * navigate to http://localhost:3000
   * Explore!
