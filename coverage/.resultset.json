@@ -73,7 +73,7 @@
         1,
         null,
         1,
-        41,
+        42,
         null,
         null,
         null,
@@ -85,8 +85,8 @@
         1,
         null,
         1,
-        41,
-        41,
+        42,
+        42,
         null,
         null,
         null,
@@ -156,6 +156,14 @@
         1,
         null,
         1
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/config/spring.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        5
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/config/environments/test.rb": [
         1,
@@ -512,6 +520,11 @@
         null,
         null,
         null,
+        1,
+        null,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/config/initializers/filter_parameter_logging.rb": [
@@ -622,6 +635,16 @@
         1,
         null,
         null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         1,
         1,
         1,
@@ -653,6 +676,19 @@
       "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/channels/application_cable/connection.rb": [
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/app/controllers/callbacks_controller.rb": [
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        0,
         null,
         null
       ],
@@ -830,7 +866,7 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -982,8 +1018,8 @@
         1,
         null,
         1,
-        14,
-        14,
+        15,
+        15,
         81,
         null,
         null,
@@ -1026,7 +1062,7 @@
         null,
         null,
         1,
-        29,
+        30,
         1,
         null,
         null,
@@ -1123,6 +1159,21 @@
         1,
         1,
         1,
+        1,
+        null,
+        null
+      ],
+      "/Users/augustinevontrapp/Desktop/ep_room_zen/ep_room_zen_2/spec/features/user_dashboard_feature_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         null,
         null
@@ -1302,6 +1353,6 @@
         null
       ]
     },
-    "timestamp": 1475343432
+    "timestamp": 1475448433
   }
 }

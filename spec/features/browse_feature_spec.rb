@@ -8,7 +8,7 @@ describe 'The browse feaure should' do
     house = FactoryGirl.create(:house)
     visit houses_path
     click_on house.title
-    save_and_open_page
+
     expect(page).to have_content(house.address)
   end
 
@@ -19,7 +19,7 @@ describe 'The browse feaure should' do
     house = FactoryGirl.create(:house)
     house_2 = FactoryGirl.create(:house, address: 'Seattle, WA', title: 'Seattle')
     visit houses_path
-    save_and_open_page
+
     fill_in 'search_input', with: 'Seattle'
     expect(page).to have_content('Seattle')
   end
