@@ -1,31 +1,49 @@
-# README
+# RoomZen
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+  This app is here to allow you to search for a room in a stress free way
 
-Things you may want to cover:
+## Specs
+  * rails version 5.0.0.1
+  * Rspec/Capybara/Polpoltergeist
+    * please make sure you have phantom.js installed on your machine
+  * Postgresql
 
-* Ruby version
 
-* System dependencies
+## Setup
+  * run `git clone https://github.com/augustinevt/ep_room_zen_2.git`
+  * run `postgres` in a separate terminal window
+  * run `bundle install`
+  * run `rake db:create`
+  * run `rake db:migrate`
+  * run `rake db:seed`
+  * run `rake db:test:prepare`
 
-* Configuration
+  * create an .env file in to root directory
+    * please include the proper api credentials in this .env file in the following format, replacing the placeholders with your actual information. If you are unsure how to aquire keys and secrets please refer to the subsequent documentation.
+    ```
+    GOOGLE_MAPS_KEY=<google_maps_key>
+    GOOGLE_OAUTH2_KEY=<google_api_key>
+    GOOGLE_OAUTH2_SECRET=<google_api_secret>
+    FACEBOOK_OAUTH_KEY=<faceook_api_key>
+    FACEBOOK_OAUTH_SECRET=<facebook_api_key>
+    ```
+    ###### [google maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
+    ###### [google oauth2](https://developers.google.com/+/web/api/rest/oauth)
+    ###### [facebook oauth2](https://developers.facebook.com/products/login)
 
-* Database creation
+    
+  * run `rails s`
+  * navigate to http://localhost:3000
+  * Explore!
 
-* Database initialization
 
-* How to run the test suite
+## Issues
+  There are no known bugs in this version
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contact
+  Please contact me at augustvontrapp@gmail.com
 
-* Deployment instructions
+## License
 
-* ...
-
-* users
-* user profiles
-* requests
-* houses
-* comments
-* images
+  Copyright (c) 2016 August von Trapp
