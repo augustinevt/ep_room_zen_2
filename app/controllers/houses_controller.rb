@@ -10,6 +10,15 @@ class HousesController < ApplicationController
     end
   end
 
+  def search
+    @houses = House.search(params[:search_input]).page(params[:page] || "1").per(10)
+    @markers = House.markefy(@houses)
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def new
     @house = House.new
   end
