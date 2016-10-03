@@ -1,0 +1,28 @@
+
+#user-info
+  #image-prime
+    = image_tag(user_profile.avatar, class: "fit")
+  #image-thumbs
+
+    - user_profile.images.each do |image|
+      = render 'images/secondary_image', image: image
+    = link_to 'Add Image', new_user_profile_image_path(user_profile), remote: true
+
+  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  #responses
+    - user_profile.responses.each do |res|
+      %h3
+        = render 'responses/form', respondable: user_profile, response: res
+
+
+
+#requests
+  =user_profile.user.requests.first
+  #req-details
+    -if user_profile.user.requests.any?
+      = render(user_profile.user.requests.first)
+  #request-thumbs
+    -if user_profile.user.requests.any?
+      -user_profile.user.requests.each do |req|
+        = render('requests/request_thumb', request: req)

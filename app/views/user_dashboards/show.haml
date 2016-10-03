@@ -1,0 +1,10 @@
+
+= link_to 'HOUSE', show_user_house_user_profile_path(@user.user_profile), remote: true
+
+= link_to 'BROWSE', houses_path, remote: true
+
+= link_to 'PROFILE',
+user_profile_path(@user.user_profile), remote: true
+
+#container
+  =render 'user_profiles/user_profile', user_profile: @user.user_profile

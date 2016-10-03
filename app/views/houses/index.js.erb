@@ -1,8 +1,15 @@
+$('#container').html('<%= j render("houses_browse", houses: @houses, markers: @markers) %>');
 
-$('#map-house-thumb-list').html('<%= j render("thumb_list", houses: @houses)%>');
+var markers = <%= raw @markers %>
+var map_markers = []
 
 
-var markers = <%= raw @markers.to_json %>
-removeMarkers();
+initMap();
 addMarkers(markers);
-console.log(markers);
+
+
+$(function(){
+  $('#search_input').keyup(function(e){
+    $('#search-form').submit();
+  })
+})

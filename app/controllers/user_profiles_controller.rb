@@ -10,6 +10,10 @@ class UserProfilesController < ApplicationController
 
   def show
     @user_profile = UserProfile.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create

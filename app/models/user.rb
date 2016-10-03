@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  after_create :create_user_profile
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
 
@@ -19,4 +22,8 @@ class User < ApplicationRecord
   has_many :requests
   has_many :requested_houses, through: :requests, source: :house
   has_many :comments
+
+  def create_user_profile
+    up = UserProfile.create(user: self, username: self.email, first_name: 'Otsu')
+  end
 end
