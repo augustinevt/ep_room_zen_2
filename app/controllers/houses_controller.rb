@@ -26,6 +26,10 @@ class HousesController < ApplicationController
     @house = House.new(house_params)
     @house.user = current_user
     if @house.save
+      respond_to do |format|
+        format.js
+        format.html
+      end
       redirect_to @house
     else
       render :new
