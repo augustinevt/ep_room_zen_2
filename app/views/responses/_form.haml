@@ -1,8 +1,37 @@
+-# =form_for [respondable, response], remote: true do |f|
+-#   =f.label :value, response.question.title
+-#     =f.label for: "response_#{response.question.id}_value_1" do
+-#       =f.radio_button :value, 1, id: "response_#{response.question.id}_value_1"
+-#
+-#     =f.radio_button :value, 2, id: "response_#{response.question.id}_value_2"
+-#     =f.radio_button :value, 3, id: "response_#{response.question.id}_value_3"
+-#     =f.radio_button :value, 4, id: "response_#{response.question.id}_value_4"
+-#     =f.radio_button :value, 5, id: "response_#{response.question.id}_value_5"
+-#   =f.submit "Submit #{response.question.id}"
+
 =form_for [respondable, response], remote: true do |f|
-  =f.label :value, response.question.title
-  =f.radio_button :value, 1, id: "response_#{response.question.id}_value_1"
-  =f.radio_button :value, 2, id: "response_#{response.question.id}_value_2"
-  =f.radio_button :value, 3, id: "response_#{response.question.id}_value_3"
-  =f.radio_button :value, 4, id: "response_#{response.question.id}_value_4"
-  =f.radio_button :value, 5, id: "response_#{response.question.id}_value_5"
-  =f.submit "Submit #{response.question.id}"
+  = response.question.title
+
+  %br
+
+  = f.label :"#{response.question.id}_value_1" do
+    = f.radio_button :value, 1, id: "response_#{response.question.id}_value_1", class: 'radio-button'
+    yes
+
+  = f.label :"#{response.question.id}_value_2" do
+    = f.radio_button :value, 2, id: "response_#{response.question.id}_value_2", class: 'radio-button'
+    sure
+
+
+  = f.label :"#{response.question.id}_value_3" do
+    = f.radio_button :value, 3, id: "response_#{response.question.id}_value_3", class: 'radio-button'
+    meh
+
+
+  = f.label :"#{response.question.id}_value_4" do
+    = f.radio_button :value, 4, id: "response_#{response.question.id}_value_4", class: 'radio-button'
+    no
+
+  = f.label :"#{response.question.id}_value_5" do
+    = f.radio_button :value, 5, id: "response_#{response.question.id}_value_5", class: 'radio-button'
+    hell no

@@ -1,5 +1,5 @@
 class UserProfile < ApplicationRecord
-  after_save :make_responses
+  after_create :make_responses
   validates_presence_of :username
 
   belongs_to :user

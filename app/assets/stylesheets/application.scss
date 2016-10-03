@@ -166,3 +166,19 @@
   @include span-columns(4);
   @include omega(3n);
 }
+
+.radio-button {
+  visibility: hidden;
+}
+
+.selected {
+  background-color: red;
+}
+
+input[type=radio]:checked {
+  border:solid;
+}
+
+label:hover {
+  background-color: red;
+}

@@ -16,3 +16,18 @@
 //= require map
 //= require scroll
 //= require_tree .
+
+$(function(){
+
+  $("input:radio:checked").parent().addClass('selected');
+
+  console.log($("input:radio:checked"));
+
+  $('label').click(function(){
+    $(this).parent().find('.selected').removeClass('selected');
+    $(this).addClass('selected');
+    console.log($(this).closest('form'));
+    $(this).closest('form').submit();
+  });
+
+});

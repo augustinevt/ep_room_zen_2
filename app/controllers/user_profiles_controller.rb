@@ -26,6 +26,19 @@ class UserProfilesController < ApplicationController
     end
   end
 
+
+  def update
+    @user_profile = current_user.user_profile
+    if @user_profile.update(profile_params)
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      flash[:alert] = "Your Profile picture could not be updated"
+    end
+  end
+
   def show_user_house
     @house = current_user.house
     respond_to do |format|
@@ -33,6 +46,8 @@ class UserProfilesController < ApplicationController
       format.js
     end
   end
+
+
 
   private
 

@@ -1,6 +1,5 @@
-<%= form_for [@house, @request] do |f| %>
+<%= form_for [house, house.requests.new], authenticity_token: true, remote: true do |f| %>
   <%= f.label :message %>
   <%= f.text_field :message %>
-
   <%= f.submit 'Submit' %>
 <%end%>

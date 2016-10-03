@@ -1,12 +1,14 @@
+// <% javascript_include_tag("https://maps.googleapis.com/maps/api/js?key=AIzaSyA9wAasFl3L3uOLJzK469tAc8tC2ch1YYw&callback=initMap") %>
+
+
 $('#container').html('<%= j render("houses_browse", houses: @houses, markers: @markers) %>');
+
 
 var markers = <%= raw @markers %>
 var map_markers = []
 
-
 initMap();
 addMarkers(markers);
-
 
 $(function(){
   $('#search_input').keyup(function(e){
