@@ -11,5 +11,11 @@ addMarkers(markers);
 $(function(){
   $('#search_input').keyup(function(e){
     $('#search-form').submit();
-  })
+  });
+  $('#house-map-show').mouseenter(function(){
+    $('body').addClass('noscroll');
+  });
+  $('#house-map-show').mouseleave(function(){
+    $('body').removeClass('noscroll');
+  });
 })
