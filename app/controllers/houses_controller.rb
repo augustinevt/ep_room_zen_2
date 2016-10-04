@@ -22,15 +22,15 @@ class HousesController < ApplicationController
   def new
     @house = House.new
   end
+
   def create
     @house = House.new(house_params)
     @house.user = current_user
     if @house.save
       respond_to do |format|
-        format.js
         format.html
+        format.js
       end
-      redirect_to @house
     else
       render :new
     end

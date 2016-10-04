@@ -2,10 +2,11 @@ require 'rails_helper'
 
 describe 'The house feature' do
 
-  it 'should allow users to create a house' do
+  it 'should allow users to create a house', js: true do
     user = FactoryGirl.create(:user)
     login_as(user, scope: :user)
-    visit new_house_path
+    visit root_path
+    click_on "HOUSE"
     fill_in 'Title', with: 'foo'
     fill_in 'Address', with: 'foo'
     click_on 'Create House'
