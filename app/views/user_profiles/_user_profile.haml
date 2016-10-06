@@ -2,6 +2,7 @@
 #user-info
   %h1= user_profile.first_name
   %h1= user_profile.last_name
+  %h1= user_profile.username
   #image-prime
     = image_tag(user_profile.avatar, class: "fit", id: "profile-image")
     = form_for user_profile, method: :put, remote: true do |f|
@@ -23,7 +24,6 @@
 
 
 #requests
-  =user_profile.user.requests.first
   #req-details
     -if user_profile.user.requests.any?
       = render(user_profile.user.requests.first)

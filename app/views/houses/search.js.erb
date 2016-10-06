@@ -5,4 +5,3 @@ $('#map-house-thumb-list').html('<%= j render("thumb_list", houses: @houses)%>')
 var markers = <%= raw @markers.to_json %>
 removeMarkers();
 addMarkers(markers);
-console.log(markers);

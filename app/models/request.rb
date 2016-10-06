@@ -14,9 +14,14 @@ class Request < ApplicationRecord
       sum + (value[0].value - applicant_responses[value[1]].value).abs
     end
 
-    dividend = (Question.all.count * 4)
-    divisor = (Question.all.count * 4 - diff)
+    divisor = (Question.all.count.to_i * 5)
+    dividend = (Question.all.count * 5 - diff)
 
     self.compatibility = (dividend.to_f/divisor.to_f * 100)
+    
   end
 end
+
+
+# the difference between numbers
+#

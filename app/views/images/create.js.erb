@@ -1,4 +1,4 @@
-$('body').append('<h2>Image Successfully Added</h1>');
+$('#messages').append('<h2>Image Successfully Added</h1>');
 $('#image-form').remove();
 $('.temp-thumb').show();
 $('#image-thumbs').append('<%= j render("secondary_image", image: @image)%>');

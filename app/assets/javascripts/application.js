@@ -17,7 +17,8 @@
 //= require scroll
 //= require_tree .
 
-$(function(){
+
+var labelStyles = function() {
 
   $("input:radio:checked").parent().addClass('selected');
 
@@ -26,5 +27,15 @@ $(function(){
     $(this).addClass('selected');
     $(this).closest('form').submit();
   });
+
+};
+
+
+
+
+
+$(function(){
+
+  labelStyles();
 
 });

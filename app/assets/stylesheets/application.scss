@@ -22,7 +22,7 @@
 
 
 #user-info, #house-info {
-  background-color: pink;
+  //background-color: pink;
   min-height: 100vh;
   @include span-columns(6)
 }
@@ -30,7 +30,7 @@
 
 
 #requests{
-  background-color: red;
+  //background-color: red;
   min-height: 100vh;
   @include span-columns(6)
 }
@@ -68,7 +68,7 @@
   @include span-columns(10);
   @include outer-container;
   @include shift(1);
-  background-color: lime;
+  //background-color: lime;
   min-height: 500px;
 }
 
@@ -76,13 +76,13 @@
   @include span-columns(4);
   @include omega(3n);
   min-height: 150px;
-  background-color: orange;
+  //background-color: orange;
   margin-top: 10px;
 }
 
 #req-details {
   @include span-columns(12);
-  background-color: skyblue;
+  //background-color: skyblue;
   min-height: 500px;
 }
 
@@ -165,6 +165,15 @@
   margin-top: 10px;
   @include span-columns(4);
   @include omega(3n);
+}
+
+#application {
+  @include span-columns(12);
+  border: solid;
+  text-align: center;
+  button {
+    border-radius: 0px;
+  }
 }
 
 .radio-button {

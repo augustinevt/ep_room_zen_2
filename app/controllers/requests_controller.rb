@@ -9,15 +9,17 @@ class RequestsController < ApplicationController
 
   def create
     @house = House.find(params[:house_id])
-    @request = @house.requests.new(request_params)
-    @request.user = current_user
-    if @request.save
-      respond_to do |format|
-        format.js
-        format.html {redirect_to house_request_path(@house, @request)}
+    if @house != current_user.house
+      @request = @house.requests.new(request_params)
+      @request.user = current_user
+      if @request.save
+        respond_to do |format|
+          format.js
+          format.html {redirect_to house_request_path(@house, @request)}
+        end
+      else
+        render :new
       end
-    else
-      render :new
     end
   end
 

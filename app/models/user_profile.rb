@@ -6,7 +6,7 @@ class UserProfile < ApplicationRecord
   has_many :images, as: :imageable
   has_many :responses, as: :respondable
 
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "http://static.tumblr.com/0ee21b1cf4ad4b2057305b00cb5f9669/ihh9sai/uUWmr68oc/tumblr_static_tumblr_static_cheese_205_1362800142.jpg"
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Ho_Chi_Minh_1946.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   def make_responses
