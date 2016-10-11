@@ -26,11 +26,11 @@
       -if house.requests.any?
         = render('requests/request', request: house.requests.first )
       -else
-        %h1 there are no applicant
+        %h1 there are no applicants
     #request-thumbs
       -if house.requests.any?
         -house.requests.each do |req|
-          = render('requests/request_thumb', request: req)
+          = render('requests/request_thumb', request: req, display: 'users')
 -else
   %h1 Here is no house;
   = render 'houses/form'

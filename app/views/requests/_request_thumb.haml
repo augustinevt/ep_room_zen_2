@@ -1,4 +1,8 @@
 .req-thumb
   =link_to request_path(request), id: "request_#{request.id}", remote: true do
-    =image_tag(request.user.user_profile.avatar, class: 'fit')
+    = display
+    -if display == 'users'
+      =image_tag(request.user.user_profile.avatar, class: 'fit')
+    -else
+      =image_tag(request.house.avatar, class: 'fit')
     %h6= request.house.title

@@ -30,4 +30,4 @@
   #request-thumbs
     -if user_profile.user.requests.any?
       -user_profile.user.requests.each do |req|
-        = render('requests/request_thumb', request: req)
+        = render('requests/request_thumb', request: req, display: 'houses')
