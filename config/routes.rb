@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   get 'user_dashboard', to: :show, controller: 'user_dashboards'
 
-
   resources :user_profiles do
     member do
       get 'show_user_house'
