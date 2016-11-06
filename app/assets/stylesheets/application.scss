@@ -1,6 +1,8 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
+
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    grey;
 }
@@ -16,15 +18,35 @@
    color:    grey;
 }
 
+//jquery
 .noscroll {
   overflow: hidden;
+}
+
+
+#top-nav{
+  text-align: center;
+  width: 100%;
+  padding-bottom: .5666rem;
+}
+
+.top-link {
+  font-size: 2rem;
+  display: inline-block;
+  background: grey;
+  padding: .5666rem;
+  a {
+    text-decoration: none;
+  }
 }
 
 
 #user-info, #house-info {
   //background-color: pink;
   min-height: 100vh;
-  @include span-columns(6)
+  @include span-columns(6);
+  background-color: rgba(.5, .5, .5,.2);
+  text-align: center;
 }
 
 
@@ -32,18 +54,19 @@
 #requests{
   //background-color: red;
   min-height: 100vh;
-  @include span-columns(6)
+  @include span-columns(6);
+  background-color: rgba(100, .2, .2, .2);
 }
 
 #image-prime {
   min-height: 200px;
   @include span-columns(8);
-  @include shift(1);
+  @include shift(2);
 }
 #image-thumbs {
   @include span-columns(8);
   @include outer-container;
-  @include shift(1);
+  @include shift(2);
 }
 
 .temp-thumb {
@@ -57,6 +80,7 @@
   margin-top: 75px;
   @include span-columns(10);
   @include shift(1);
+  background-color: rgba(.5, .5, 5, .5);
 }
 
 #responses {
