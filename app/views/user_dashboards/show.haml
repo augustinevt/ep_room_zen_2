@@ -1,16 +1,18 @@
-#top-nav
-  .top-link
-    = link_to 'HOUSE', show_user_house_user_profile_path(@user.user_profile), remote: true
 
-  .top-link
-    = link_to 'BROWSE', houses_path, remote: true
+#dash-container
+  #top-nav
+    .top-link
+      = link_to 'HOUSE', show_user_house_user_profile_path(@user.user_profile), remote: true
 
-  .top-link
-    = link_to 'PROFILE',
-  user_profile_path(@user.user_profile), remote: true
+    .top-link
+      = link_to 'BROWSE', houses_path, remote: true
 
-  .top-link
-    = link_to 'LOGOUT', destroy_user_session_path, method: :delete
+    .top-link
+      = link_to 'PROFILE',
+    user_profile_path(@user.user_profile), remote: true
 
-#container
-  =render 'user_profiles/user_profile', user_profile: @user.user_profile
+    .top-link
+      = link_to 'LOGOUT', destroy_user_session_path, method: :delete
+
+  #container
+    =render 'user_profiles/user_profile', user_profile: @user.user_profile

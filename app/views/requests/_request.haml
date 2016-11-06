@@ -1,20 +1,52 @@
-%h1
-  Renter:
-  = request.user.user_profile.username
-%h1
-  House:
-  = request.house.title
-%h1
-  message:
-  = request.message
-%h1
-  Compatibility
-  = request.compatibility
-  \%
 
-= render 'comments/form', object: request
+- if type == 'house'
 
-#comments
-  -if request.comments.any?
-    -request.comments.each do |comment|
-      = render(comment)
+  #image-prime
+    = image_tag(request.house.avatar, class: "fit")
+
+  %h1= request.house.title
+  
+  #image-thumbs
+    -if request.house.images.any?
+      - request.house.images.each do |image|
+        = render 'images/secondary_image', image: image
+    -else
+      %h1 There are no images...
+
+  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  = render 'comments/form', object: request
+
+  #comments
+    -if request.comments.any?
+      -request.comments.each do |comment|
+        = render(comment)
+- else
+
+  #image-prime
+    = image_tag(request.user.user_profile.avatar, class: "fit")
+
+  %h1= request.user.user_profile.first_name
+
+  #image-thumbs
+    -if request.user.user_profile.images.any?
+      - request.user.user_profile.images.each do |image|
+        = render 'images/secondary_image', image: image
+    -else
+      %h1 There are no images...
+
+  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  #responses
+    - request.user.user_profile.responses.each do |res|
+      %h3
+        = render 'responses/display', response: res
+
+
+
+  = render 'comments/form', object: request
+
+  #comments
+    -if request.comments.any?
+      -request.comments.each do |comment|
+        = render(comment)

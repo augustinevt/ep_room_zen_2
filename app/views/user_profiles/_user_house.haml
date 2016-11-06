@@ -24,7 +24,7 @@
 
     #req-details
       -if house.requests.any?
-        = render('requests/request', request: house.requests.first )
+        = render('requests/request', request: house.requests.first, type: 'user')
       -else
         %h1 there are no applicants
     #request-thumbs

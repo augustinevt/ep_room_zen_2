@@ -1,3 +1,6 @@
-.comment-box
-  = comment.body
-  = comment.user.user_profile.username
+-if comment.request.user == current_user
+  .comment{class: 'appplicant'}
+    %p= comment.body
+-else
+  .comment{class: 'house-owner'}
+    %p= commet.body

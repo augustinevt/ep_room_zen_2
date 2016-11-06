@@ -25,6 +25,7 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    @type = params[:type]
     respond_to do |format|
       format.html
       format.js

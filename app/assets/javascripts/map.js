@@ -58,5 +58,4 @@
     $.ajax({url: 'houses/'+marker.id, dataType: 'script', success: function(){
       $('#house-map-show').append('<I heart jQuery>');
     }});
-
   };
