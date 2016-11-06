@@ -1,6 +1,6 @@
--if comment.request.user == current_user
+-if comment.user == current_user
   .comment{class: 'appplicant'}
     %p= comment.body
 -else
   .comment{class: 'house-owner'}
-    %p= commet.body
+    %p= comment.body

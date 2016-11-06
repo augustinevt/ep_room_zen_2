@@ -33,7 +33,6 @@ html {
 
 }
 
-
 #top-nav{
   text-align: center;
   padding-bottom: .300rem;
@@ -98,15 +97,17 @@ html {
 }
 
 #bio {
-  margin-top: 75px;
+  margin: 75px;
   @include span-columns(10);
   @include shift(1);
-  background-color: rgba(.5, .5, 5, .5);
+  text-align: left;
+  //background-color: rgba(.5, .5, 5, .5);
 }
 
 #responses {
   margin-top: 100px;
   @include span-columns(12);
+  text-align: center;
 }
 
 #request-thumbs {
@@ -134,6 +135,18 @@ html {
   overflow: auto;
 }
 
+#compatibility-thumb {
+  position: relative;
+  top: 80%;
+  color: white;
+  text-align: center;
+  padding: 0;
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 .secondary-image {
   overflow: auto;
   height: 200px;
@@ -152,7 +165,6 @@ html {
 .req-thumb {
   @include span-columns(12);
   @include omega(4n);
-  background-color: grey;
   margin-top: 10px;
 }
 
@@ -222,8 +234,10 @@ html {
   text-align: center;
 }
 
-#comments {
-
+#comment-form {
+  text-align: center;
+  @include span-columns(10);
+  @include shift(1);
 }
 
 .comment {
@@ -239,7 +253,7 @@ html {
   @include shift(-2);
 }
 .house-owner {
-  background-color: rgba(0, 255, 0, .4);
+  background-color: rgba(255, 0, 0, .4);
   @include shift(2);
 }
 
@@ -250,13 +264,39 @@ html {
 }
 
 .selected {
-  background-color: red;
+  button {
+    background-color: red;
+  }
 }
+
 
 input[type=radio]:checked {
   border:solid;
 }
 
 label:hover {
+  button {
+    background-color: red;
+  }
+}
+
+.submit {
+  border-radius: 0px;
+  margin: auto;
+}
+
+textarea {
+  width: 100%;
+  height: 2rem;
+}
+
+.response-button {
+  border: 4px;
+  border-radius: 50px;
+  background: none;
+}
+
+
+.display-selected {
   background-color: red;
 }

@@ -1,11 +1,7 @@
 = response.question.title
--if response.value == 1
-  %h1 intolerable
--elsif response.value == 2
-  %h1 not perfered
--elsif response.value == 3
-  %h1 neutral
--elsif response.value == 4
-  %h1 encouraged
--elsif response.value == 5
-  %h1 cant be without
+%br
+- (1..5).each do |i|
+  -if (response.value == i)
+    %button{class: "response-button display-selected"}=i
+  -else (response.value == i)
+    %button{class: "response-button"}=i

@@ -2,9 +2,9 @@
 #user-info
   #image-prime
     = image_tag(user_profile.avatar, class: "fit", id: "profile-image")
-    = form_for user_profile, method: :put, remote: true do |f|
-      = f.file_field :avatar
-      = f.submit
+    -# = form_for user_profile, method: :put, remote: true do |f|
+    -#   = f.file_field :avatar
+    -#   = f.submit
   %h1= user_profile.first_name
   %h1= user_profile.last_name
   %h1= user_profile.username

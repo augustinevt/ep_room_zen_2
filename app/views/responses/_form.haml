@@ -16,22 +16,22 @@
 
   = f.label :"#{response.question.id}_value_1" do
     = f.radio_button :value, 1, id: "response_#{response.question.id}_value_1", class: 'radio-button'
-    yes
+    %button{class: 'response-button'} 1
 
   = f.label :"#{response.question.id}_value_2" do
     = f.radio_button :value, 2, id: "response_#{response.question.id}_value_2", class: 'radio-button'
-    sure
+    %button{class: 'response-button'} 2
 
 
   = f.label :"#{response.question.id}_value_3" do
     = f.radio_button :value, 3, id: "response_#{response.question.id}_value_3", class: 'radio-button'
-    meh
+    %button{class: 'response-button'} 3
 
 
   = f.label :"#{response.question.id}_value_4" do
     = f.radio_button :value, 4, id: "response_#{response.question.id}_value_4", class: 'radio-button'
-    no
+    %button{class: 'response-button'} 4
 
   = f.label :"#{response.question.id}_value_5" do
     = f.radio_button :value, 5, id: "response_#{response.question.id}_value_5", class: 'radio-button'
-    hell no
+    %button{class: 'response-button'} 5
