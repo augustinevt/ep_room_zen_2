@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Question.create(title: 'How Clean Are You?')
 Question.create(title: 'What\'s Your Noise Level?')
-Question.create(title: 'How Late Are You Up Usually?')
-Question.create(title: 'How Do You Feel About Paying Rent On Time?')
-Question.create(title: 'How Feel About Sharing Food?')
-Question.create(title: 'How Do You Handle Disagreements?')
-Question.create(title: 'How Do You Feel About Parties At The House?')
-Question.create(title: 'What Do You Think About Having SOs Over?')
+Question.create(title: 'How Tolerant Of Unexpected Parties?')
+Question.create(title: 'How Strongly Do You Feel About Paying Rent On Time?')
+Question.create(title: 'How Strongly Do You Feel About Sharing Food?')
+Question.create(title: 'How Willing Are You To Talk Through Disagreements?')
+Question.create(title: 'How Tolerant Are You Of Significant Others Staying Over?')
+Question.create(title: 'How Strongly Do You Feel About Recycling?')
 Question.create(title: 'How Political Are You?')
-Question.create(title: 'Do You Use Recreational Drugs?')
+Question.create(title: 'Do Tolerant Are You Of Use Recreational Drugs?')
 
 
 
@@ -23,9 +23,11 @@ user_2 = User.create(email: "hochimin@hochimin.com", password: 'foobar', passwor
 user_3 = User.create(email: "kojiro@sasaki.com", password: 'foobar', password_confirmation: 'foobar')
 
 
-UserProfile.create(user: user_1, first_name: "Amy", last_name: "VeneVici", avatar: 'http://img01.deviantart.net/9253/i/2015/032/c/7/woman_profile_by_lisabailarina-d8g9uhn.jpg')
+UserProfile.create(user: user_1, username: "Amy VeneVici", first_name: "Amy", last_name: "VeneVici", avatar: 'http://www.udaipurtimes.com/wp-content/uploads/2012/06/indian-woman.jpg')
 
-UserProfile.create(user: user_2, first_name: "Ho", last_name: "Chi Min", avatar: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Ho_Chi_Minh_1946.jpg')
+UserProfile.create(user: user_2, username: "Ho Chi Mihn", first_name: "Ho", last_name: "Chi Min", avatar: 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Ho_Chi_Minh_1946.jpg')
+
+UserProfile.create(user: user_3, username: "Sasaki Kojiro", first_name: "Kojiro", last_name: "Sasaki", avatar: 'http://pre03.deviantart.net/cd7c/th/pre/f/2012/359/8/3/old_man_of_the_mirror_by_fabianomillani-d5p5s3m.jpg')
 
 House.create(title: 'Cute house in Portland', address: '3800 SW Cedar Hills Blvd, Suite 260, Beaverton, OR 97005', avatar: 'http://coolhouse.co.nz/wp-content/uploads/2014/06/coolhouse-collection-mini-740x480.png', user: user_1)
 

@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    new_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.email = auth.info.email
@@ -24,6 +24,9 @@ class User < ApplicationRecord
   has_many :comments
 
   def create_user_profile
-    up = UserProfile.create(user: self, username: self.email)
+    if !self.user_profile
+      up = UserProfile.create(user: self)
+    end
   end
+
 end

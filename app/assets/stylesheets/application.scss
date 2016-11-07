@@ -33,6 +33,17 @@ html {
 
 }
 
+.sign-up-outer-container {
+  @include span-columns(12);
+}
+.sign-up-inner-container {
+  @include span-columns(6);
+  @include shift(3);
+  text-align: center;
+  margin-top: 200px;
+
+}
+
 #top-nav{
   text-align: center;
   padding-bottom: .300rem;
