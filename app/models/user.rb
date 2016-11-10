@@ -27,4 +27,6 @@ class User < ApplicationRecord
       up = UserProfile.create(user: self, username: 'Nicole Vollum')
   end
 
+
+
 end
