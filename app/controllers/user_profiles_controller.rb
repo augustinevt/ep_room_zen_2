@@ -16,6 +16,10 @@ class UserProfilesController < ApplicationController
     end
   end
 
+  def edit
+
+  end
+
   def create
     @user_profile = UserProfile.new(profile_params)
     @user_profile.user = current_user
