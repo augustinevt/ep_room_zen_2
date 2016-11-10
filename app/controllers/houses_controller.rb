@@ -1,6 +1,7 @@
 class HousesController < ApplicationController
 
   def index
+    @house = House.first()
     @houses =
     House.search(params[:search_input]).page(params[:page] || "1").per(10)
     @markers = House.markefy(@houses)

@@ -1,19 +1,34 @@
 
 #user-info
-  #image-prime
-    = image_tag(user_profile.avatar, class: "fit", id: "profile-image")
-    = form_for user_profile, method: :put, remote: true do |f|
-      = f.file_field :avatar
-      = f.submit
-  %h1= user_profile.username
-  #image-thumbs
+  #main-img
+    = image_tag(user_profile.avatar, class: "fill", id: "profile-image")
 
+  #name
+    %h1= user_profile.username
+
+    =link_to('https://www.facebook.com/justin.v.trapp') do
+      =image_tag('https://cdn1.iconfinder.com/data/icons/logotypes/32/square-facebook-512.png', class: "icon")
+
+    =link_to('https://www.instagram.com/augustvontrapp/?hl=en') do
+      =image_tag('http://3835642c2693476aa717-d4b78efce91b9730bcca725cf9bb0b37.r51.cf1.rackcdn.com/Instagram_App_Large_May2016_200.png', class: "icon")
+
+    =link_to('https://twitter.com/AugustvonTrapp') do
+      =image_tag('https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter_letter-512.png', class: "icon")
+
+  -# #profile-image-form
+  -#   = form_for user_profile, method: :put, remote: true do |f|
+  -#     = f.file_field :avatar
+  -#     %br
+  -#     = f.submit
+
+
+  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  #image-thumbs
     - user_profile.images.each do |image|
       = render 'images/secondary_image', image: image
 
-  = link_to 'Add Image', new_user_profile_image_path(user_profile), remote: true
-
-  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    = link_to 'Add Image', new_user_profile_image_path(user_profile), remote: true
 
   #responses
     - user_profile.responses.each do |res|
@@ -22,8 +37,6 @@
           = render 'responses/form', respondable: user_profile, response: res
         -else
           = render 'response/display', response: res
-
-
 
 #requests
   #req-details
