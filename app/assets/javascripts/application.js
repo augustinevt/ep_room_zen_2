@@ -30,12 +30,6 @@ var labelStyles = function() {
 
 };
 
-
-
-
-
 $(function(){
-
   labelStyles();
-
 });

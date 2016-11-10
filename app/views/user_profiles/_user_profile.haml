@@ -15,19 +15,27 @@
     =link_to('https://twitter.com/AugustvonTrapp') do
       =image_tag('https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/twitter_letter-512.png', class: "icon")
 
-  -# #profile-image-form
-  -#   = form_for user_profile, method: :put, remote: true do |f|
-  -#     = f.file_field :avatar
-  -#     %br
-  -#     = f.submit
+  #profile-image-form
+    = form_for user_profile, method: :put, remote: true do |f|
+      = f.file_field :avatar
+      %br
+      = f.submit
 
 
-  #bio Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  #bio
+    Hello,
+    I'll be coming to Portland around 11.10 and need to secure a furnished room for at least 2 weeks, and month to month preferred thereafter. I'm a huge walker and won't have a car, so I'll need to be near public transportation and a grocery store, restaurants and some cultural activity...no faraway suburbs. Verified Pay Pal, LinkedIn, Facebook and/or Airbnb accounts only and phone/Skype conversations, please.
+
+    I am a 'young', creative woman in my 40's with a background in fashion/art, music, acting/voice acting and clinical skin care therapist is my day job. Have lived in CA for 25 years and many major cities throughout the US as well as Italia. I'm extremely CLEAN, considerate, adaptable and interactive, although I respect privacy and quiet time. Also a huge pet lover/caretaker, particularly of senior rescue dogs, and I have excellent references for this as well from the #1 non profit in the Bay Area, Muttville, and I welcome being around and caring for pets.
+
+    I will be interviewing for jobs and getting to know the city. I also have 30 plus glowing reviews from airbnb as well as from a lovely, family/couple I recently house/cat sat for in Portland in July 2016.
+
+    Thank you ~~~~~
 
   #image-thumbs
     - user_profile.images.each do |image|
       = render 'images/secondary_image', image: image
-
+  #secondary-image-form
     = link_to 'Add Image', new_user_profile_image_path(user_profile), remote: true
 
   #responses

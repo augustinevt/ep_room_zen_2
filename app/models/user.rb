@@ -24,7 +24,7 @@ class User < ApplicationRecord
   has_many :comments
 
   def create_user_profile
-      up = UserProfile.create(user: self, username: 'August von Trapp')
+      up = UserProfile.create(user: self, username: 'Nicole Vollum')
   end
 
 end

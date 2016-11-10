@@ -1,7 +1,6 @@
 class ResponsesController < ApplicationController
 
   def update
-
     @response = Response.find(params[:id])
     if @response.update(response_params)
       respond_to do |format|

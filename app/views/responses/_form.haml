@@ -9,8 +9,9 @@
 -#     =f.radio_button :value, 5, id: "response_#{response.question.id}_value_5"
 -#   =f.submit "Submit #{response.question.id}"
 
-=form_for [respondable, response], remote: true do |f|
+= form_for [respondable, response], remote: true do |f|
   = response.question.title
+  = response.value
 
   %br
 
