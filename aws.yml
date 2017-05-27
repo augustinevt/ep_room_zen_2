@@ -1,7 +1,7 @@
 development:
-  access_key_id: AKIAJLZ556GAVMDMS25A
-  secret_access_key: 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
+  access_key_id: 
+  secret_access_key: 
 
 production:
-  access_key_id: AKIAJLZ556GAVMDMS25A
-  secret_access_key: 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
+  access_key_id: 
+  secret_access_key: 
